@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <Button
+        android:id="@+id/main_login_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MyInfo"
+        android:layout_marginLeft="330sp"
+        android:textColor="@color/black"
+        android:backgroundTint="#FFFFFF"
+        />
+    <Button
+        android:id="@+id/private_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Home"
+        android:textColor="@color/black"
+        android:backgroundTint="#FFFFFF"
+        />
+    <Button
+        android:id="@+id/meeting_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Meeting"
+        android:textColor="@color/black"
+        android:backgroundTint="#FFFFFF"
+        />
+
+</RelativeLayout>
