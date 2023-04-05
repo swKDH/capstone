@@ -1,44 +1,159 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".LoginActivity">
-
-    <Button
-        android:id="@+id/main_login_btn"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="로그인"
-        android:layout_marginLeft="330sp"
-        android:textColor="@color/black"
-        android:backgroundTint="#FFFFFF"
-        />
+        >
+        <TextView
+            android:layout_margin="7dp"
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="구해보꽈"/>
+        <TextView
+            android:layout_margin="7dp"
+            android:layout_below="@id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="학교이름"/>
+
+        <Button
+            android:id="@+id/main_login_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="로그인"
+            android:layout_toRightOf="@id/title"
+            android:layout_marginLeft="270sp"
+            android:textColor="@color/black"
+            android:backgroundTint="#FFFFFF"
+            android:background="#00ff0000"
+            />
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:id="@+id/private_lesson_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        >
+        <RelativeLayout
+            android:id="@+id/scroll_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            >
+<!--            과외-->
+            <RelativeLayout
+                android:id="@+id/private_lesson_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <TextView
+                    android:id="@+id/private_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="250dp"
+                    android:text="과외 게시판 "/>
+                <Button
+                    android:layout_toRightOf="@+id/private_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FF0000"
+                    android:backgroundTint="#FFFFFF"
+                    android:text="더 보기 >"
+                    android:textSize="12sp"
+                    android:background="#00ff0000"
+                    />
+<!--                이부분은 최근 게시물들을 넣는 layout-->
+                <LinearLayout
+                    android:layout_below="@id/private_name"
+                    android:id="@+id/private_lesson_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    />
+            </RelativeLayout>
+            <!--    과팅-->
+            <RelativeLayout
+                android:layout_below="@+id/private_lesson_layout"
+                android:id="@+id/meeting_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <TextView
+                    android:id="@+id/meeting_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="254dp"
+                    android:text="과팅 게시판"/>
+                <Button
+                    android:layout_toRightOf="@+id/meeting_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FF0000"
+                    android:backgroundTint="#FFFFFF"
+                    android:text="더 보기 >"
+                    android:textSize="12sp"
+                    android:background="#00ff0000"
+                    />
+<!--                이부분은 최근 게시물들을 넣는 layout-->
+                <LinearLayout
+                    android:layout_below="@id/meeting_name"
+                    android:id="@+id/meeting_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+<!--    main 화면 버튼들-->
     <LinearLayout
+        android:id="@+id/main_btns"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="bottom"
+        android:layout_gravity="bottom"
+        android:gravity="center"
+        android:layout_marginTop="300dp"
         >
-
-        <Button
-            android:id="@+id/private_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Home"
-            android:textColor="@color/black"
-            android:backgroundTint="#FFFFFF"
-
-            />
         <Button
             android:id="@+id/meeting_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Meeting"
+            android:text="과팅"
             android:textColor="@color/black"
             android:backgroundTint="#FFFFFF"
+            android:background="#00ff0000" />
+        <Button
+            android:id="@+id/home_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="홈"
+            android:textColor="@color/black"
+            android:backgroundTint="#FFFFFF"
+            android:background="#00ff0000"
+            />
+        <Button
+            android:id="@+id/private_lesson_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00ff0000"
+            android:backgroundTint="#FFFFFF"
+            android:text="과외"
+            android:textColor="@color/black"
             />
     </LinearLayout>
+</LinearLayout>
 
-</RelativeLayout>
