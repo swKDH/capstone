@@ -16,12 +16,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             >
-            <Button
+
+            <ImageButton
                 android:id="@+id/back_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="back"
-                />
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="#00ff0000"
+                android:backgroundTint="#FFFFFF"
+                android:scaleType="fitXY"
+                android:src="@drawable/back_btn"
+                android:textColor="@color/black" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -31,14 +35,19 @@
                 android:id="@+id/search_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
                 android:text="search"
+                android:textColor="@color/black"
+                android:backgroundTint="#FFFFFF"
+                android:background="#00ff0000"
                 />
             <Button
                 android:id="@+id/setting_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="settings"
+                android:textColor="@color/black"
+                android:backgroundTint="#FFFFFF"
+                android:background="#00ff0000"
                 />
         </LinearLayout>
         <ScrollView

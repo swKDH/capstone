@@ -122,38 +122,47 @@
     <LinearLayout
         android:id="@+id/main_btns"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:layout_height="65dp"
         android:layout_gravity="bottom"
-        android:gravity="center"
         android:layout_marginTop="300dp"
-        >
+        android:gravity="center"
+        android:orientation="horizontal">
+
         <Button
             android:id="@+id/meeting_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="과팅"
-            android:textColor="@color/black"
-            android:backgroundTint="#FFFFFF"
-            android:background="#00ff0000" />
-        <Button
-            android:id="@+id/home_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="홈"
-            android:textColor="@color/black"
-            android:backgroundTint="#FFFFFF"
             android:background="#00ff0000"
-            />
-        <Button
+            android:backgroundTint="#FFFFFF"
+            android:text="과팅"
+            android:textColor="@color/black" />
+
+        <ImageButton
+            android:id="@+id/home_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="#00ff0000"
+            android:backgroundTint="#FFFFFF"
+            android:scaleType="fitXY"
+            android:src="@drawable/home_btn"
+            android:textColor="@color/black" />
+
+        <ImageButton
             android:id="@+id/private_lesson_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="#00ff0000"
             android:backgroundTint="#FFFFFF"
-            android:text="과외"
-            android:textColor="@color/black"
-            />
+            android:src="@drawable/private_image"
+            android:textColor="@color/black" />
+        <Button
+            android:id="@+id/transfer_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00ff0000"
+            android:backgroundTint="#FFFFFF"
+            android:text="편입"
+            android:textColor="@color/black" />
     </LinearLayout>
 </LinearLayout>
 
