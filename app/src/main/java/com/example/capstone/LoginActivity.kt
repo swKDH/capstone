@@ -51,18 +51,14 @@ class LoginActivity : AppCompatActivity() {
                     dialog.setMessage("code = " + login?.code + " msg = " + login?.msg)
                     dialog.show()
                 }
-
                 override fun onFailure(call: Call<Login>, t: Throwable) {
                     //웹 통신 실패 했을때 실행되는 코드
                     var dialog = AlertDialog.Builder(this@LoginActivity)
                     dialog.setTitle("알람!")
                     dialog.setMessage("통신에 실패하였습니다")
                     dialog.show()
-
                 }
-
             })
-
 
 
         }

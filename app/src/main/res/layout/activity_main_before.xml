@@ -17,6 +17,7 @@
             android:layout_height="wrap_content"
             android:text="구해보꽈"/>
         <TextView
+            android:id="@+id/univercityname"
             android:layout_margin="7dp"
             android:layout_below="@id/title"
             android:layout_width="wrap_content"
@@ -50,7 +51,7 @@
             android:layout_height="match_parent"
             android:gravity="center"
             >
-<!--            과외-->
+            <!--            과외-->
             <RelativeLayout
                 android:id="@+id/private_lesson_layout"
                 android:layout_width="match_parent"
@@ -63,6 +64,7 @@
                     android:layout_marginRight="250dp"
                     android:text="과외 게시판 "/>
                 <Button
+                    android:id="@+id/private_more"
                     android:layout_toRightOf="@+id/private_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -72,7 +74,7 @@
                     android:textSize="12sp"
                     android:background="#00ff0000"
                     />
-<!--                이부분은 최근 게시물들을 넣는 layout-->
+                <!--                이부분은 최근 게시물들을 넣는 layout-->
                 <LinearLayout
                     android:layout_below="@id/private_name"
                     android:id="@+id/private_lesson_content"
@@ -96,6 +98,7 @@
                     android:layout_marginRight="254dp"
                     android:text="과팅 게시판"/>
                 <Button
+                    android:id="@+id/meeting_more"
                     android:layout_toRightOf="@+id/meeting_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -105,7 +108,7 @@
                     android:textSize="12sp"
                     android:background="#00ff0000"
                     />
-<!--                이부분은 최근 게시물들을 넣는 layout-->
+                <!--                이부분은 최근 게시물들을 넣는 layout-->
                 <LinearLayout
                     android:layout_below="@id/meeting_name"
                     android:id="@+id/meeting_content"
@@ -118,7 +121,7 @@
         </RelativeLayout>
     </ScrollView>
 
-<!--    main 화면 버튼들-->
+    <!--    main 화면 버튼들-->
     <LinearLayout
         android:id="@+id/main_btns"
         android:layout_width="match_parent"
@@ -128,13 +131,13 @@
         android:gravity="center"
         android:orientation="horizontal">
 
-        <Button
+        <ImageButton
             android:id="@+id/meeting_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="#00ff0000"
             android:backgroundTint="#FFFFFF"
-            android:text="과팅"
+            android:src="@drawable/meeting_btn"
             android:textColor="@color/black" />
 
         <ImageButton
@@ -153,16 +156,17 @@
             android:layout_height="wrap_content"
             android:background="#00ff0000"
             android:backgroundTint="#FFFFFF"
-            android:src="@drawable/private_image"
+            android:src="@drawable/private_lesson_btn"
             android:textColor="@color/black" />
-        <Button
+
+        <ImageButton
             android:id="@+id/transfer_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
             android:background="#00ff0000"
             android:backgroundTint="#FFFFFF"
-            android:text="편입"
-            android:textColor="@color/black" />
+            android:src="@drawable/transfer_btn"
+            android:textColor="@color/black"/>
     </LinearLayout>
 </LinearLayout>
 

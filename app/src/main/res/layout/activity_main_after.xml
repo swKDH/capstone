@@ -17,24 +17,26 @@
             android:layout_height="wrap_content"
             android:text="구해보꽈"/>
         <TextView
+            android:id="@+id/univercityname"
             android:layout_margin="7dp"
             android:layout_below="@id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="학교이름"/>
 
-        <Button
-            android:id="@+id/main_login_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="로그아웃"
+        <ImageButton
+            android:id="@+id/user_info_btn"
+            android:layout_width="31dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="299dp"
+            android:layout_marginTop="5dp"
             android:layout_toRightOf="@id/title"
-            android:layout_marginLeft="255sp"
-            android:textColor="@color/black"
-            android:backgroundTint="#FFFFFF"
             android:background="#00ff0000"
-            />
+            android:backgroundTint="#FFFFFF"
+            android:src="@drawable/user_info_btn"
+            android:textColor="@color/black" />
     </RelativeLayout>
+
 
     <ScrollView
         android:id="@+id/private_lesson_scroll"
@@ -62,6 +64,7 @@
                     android:layout_marginRight="250dp"
                     android:text="과외 게시판 "/>
                 <Button
+                    android:id="@+id/private_more"
                     android:layout_toRightOf="@+id/private_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -95,6 +98,7 @@
                     android:layout_marginRight="254dp"
                     android:text="과팅 게시판"/>
                 <Button
+                    android:id="@+id/meeting_more"
                     android:layout_toRightOf="@+id/meeting_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -121,39 +125,48 @@
     <LinearLayout
         android:id="@+id/main_btns"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:layout_height="65dp"
         android:layout_gravity="bottom"
-        android:gravity="center"
         android:layout_marginTop="300dp"
-        >
-        <Button
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageButton
             android:id="@+id/meeting_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="과팅"
-            android:textColor="@color/black"
-            android:backgroundTint="#FFFFFF"
             android:background="#00ff0000"
-            />
-        <Button
+            android:backgroundTint="#FFFFFF"
+            android:src="@drawable/meeting_btn"
+            android:textColor="@color/black" />
+
+        <ImageButton
             android:id="@+id/home_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="홈"
-            android:textColor="@color/black"
-            android:backgroundTint="#FFFFFF"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:background="#00ff0000"
-            />
-        <Button
+            android:backgroundTint="#FFFFFF"
+            android:scaleType="fitXY"
+            android:src="@drawable/home_btn"
+            android:textColor="@color/black" />
+
+        <ImageButton
             android:id="@+id/private_lesson_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="#00ff0000"
             android:backgroundTint="#FFFFFF"
-            android:text="과외"
-            android:textColor="@color/black"
-            />
+            android:src="@drawable/private_lesson_btn"
+            android:textColor="@color/black" />
+
+        <ImageButton
+            android:id="@+id/transfer_btn"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:background="#00ff0000"
+            android:backgroundTint="#FFFFFF"
+            android:src="@drawable/transfer_btn"
+            android:textColor="@color/black"/>
     </LinearLayout>
 </LinearLayout>
 
