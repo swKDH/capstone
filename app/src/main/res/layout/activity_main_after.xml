@@ -10,12 +10,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         >
-        <TextView
-            android:layout_margin="7dp"
+        <ImageView
             android:id="@+id/title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="구해보꽈"/>
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="7dp"
+            android:src="@drawable/icon" />
+
         <TextView
             android:id="@+id/univercityname"
             android:layout_margin="7dp"
@@ -138,6 +139,8 @@
             android:background="#00ff0000"
             android:backgroundTint="#FFFFFF"
             android:src="@drawable/meeting_btn"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:textColor="@color/black" />
 
         <ImageButton
@@ -148,6 +151,8 @@
             android:backgroundTint="#FFFFFF"
             android:scaleType="fitXY"
             android:src="@drawable/home_btn"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:textColor="@color/black" />
 
         <ImageButton
@@ -157,6 +162,8 @@
             android:background="#00ff0000"
             android:backgroundTint="#FFFFFF"
             android:src="@drawable/private_lesson_btn"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:textColor="@color/black" />
 
         <ImageButton
@@ -166,6 +173,8 @@
             android:background="#00ff0000"
             android:backgroundTint="#FFFFFF"
             android:src="@drawable/transfer_btn"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:textColor="@color/black"/>
     </LinearLayout>
 </LinearLayout>

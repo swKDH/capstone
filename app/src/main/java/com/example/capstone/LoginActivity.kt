@@ -3,6 +3,7 @@ package com.example.capstone
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AlertDialog
@@ -11,6 +12,7 @@ import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import kotlin.math.log
 
 
 class LoginActivity : AppCompatActivity() {
@@ -20,7 +22,7 @@ class LoginActivity : AppCompatActivity() {
 
         //retrofit object
         var retrofit = Retrofit.Builder()
-            .baseUrl("") //스프링 서버주소
+            .baseUrl("http://ggwa.devcs.co.kr/") //스프링 서버주소
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 
@@ -42,19 +44,23 @@ class LoginActivity : AppCompatActivity() {
             var textId = editText.text.toString()
             var textPw = editText2.text.toString()
 
-            loginService.requestLogin(textId,textPw).enqueue(object: Callback<Login>{
+//            loginService.requestLogin(textId,textPw).enqueue(object: Callback<Login>{
+            loginService.requestLogin(LoginRequestDto(textId, textPw)).enqueue(object: Callback<Login>{
                 override fun onResponse(call: Call<Login>, response: Response<Login>) {
-                    var login = response.body() // code, msg
+                    var login: Login? = response.body() // code, msg
 
+                    Log.d("headers", response.headers().toString())
+                    Log.d("status", response.code().toString())
+                    Log.d("??","$login");
                     var dialog = AlertDialog.Builder(this@LoginActivity)
                     dialog.setTitle("알람!")
-                    dialog.setMessage("code = " + login?.code + " msg = " + login?.msg)
+                    dialog.setMessage("code = " + login?.data + " msg = " + login?.error)
                     dialog.show()
                 }
                 override fun onFailure(call: Call<Login>, t: Throwable) {
                     //웹 통신 실패 했을때 실행되는 코드
                     var dialog = AlertDialog.Builder(this@LoginActivity)
-                    dialog.setTitle("알람!")
+                    dialog.setTitle("에러!")
                     dialog.setMessage("통신에 실패하였습니다")
                     dialog.show()
                 }

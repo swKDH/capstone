@@ -4,9 +4,78 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MeetingBoardActivity">
-    <TextView
+    android:orientation="vertical"
+    tools:context=".PrivateLessonBoardActivity">
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Hello"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp"
+            >
+
+            <ImageButton
+                android:id="@+id/back_btn"
+                android:layout_width="14dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="left"
+                android:layout_weight="1"
+                android:background="#00ff0000"
+                android:backgroundTint="#FFFFFF"
+                android:scaleType="fitXY"
+                android:src="@drawable/back_btn"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="과외 게시판\n학교이름"
+                android:gravity="center"
+                android:layout_weight="3" />
+
+
+            <ImageButton
+                android:id="@+id/search_btn"
+                android:layout_width="6dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:layout_weight="1"
+                android:background="#00ff0000"
+                android:backgroundTint="#FFFFFF"
+                android:scaleType="fitXY"
+                android:src="@drawable/search_btn"
+                android:textColor="@color/black" />
+
+            <ImageButton
+                android:id="@+id/setting_btn"
+                android:layout_width="44dp"
+                android:layout_height="match_parent"
+                android:background="#00ff0000"
+                android:backgroundTint="#FFFFFF"
+                android:scaleType="fitXY"
+                android:src="@drawable/setting_btn"
+                android:text="settings"
+                android:textColor="@color/black" />
+        </LinearLayout>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Hello"/>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
 </LinearLayout>
