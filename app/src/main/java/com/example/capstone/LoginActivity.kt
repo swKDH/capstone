@@ -36,6 +36,7 @@ class LoginActivity : AppCompatActivity() {
         val editText2: EditText = findViewById(R.id.editText2)
 
 
+
         signup_btn.setOnClickListener{
             startActivity(intent)
         }
