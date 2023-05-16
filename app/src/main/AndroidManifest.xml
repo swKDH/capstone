@@ -31,11 +31,11 @@
             android:name=".SignupActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".MainBeforeActivity"
             android:exported="false" />
         <activity
-            android:name=".MainBeforeActivity"
-            android:exported="true">
+            android:name=".LoginActivity"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
