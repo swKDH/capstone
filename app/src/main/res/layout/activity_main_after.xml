@@ -26,16 +26,28 @@
             android:text="학교이름"/>
 
         <ImageButton
-            android:id="@+id/user_info_btn"
-            android:layout_width="31dp"
-            android:layout_height="40dp"
-            android:layout_marginLeft="299dp"
-            android:layout_marginTop="5dp"
+            android:id="@+id/search_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="250dp"
+            android:layout_marginTop="10dp"
             android:layout_toRightOf="@id/title"
             android:background="#00ff0000"
             android:backgroundTint="#FFFFFF"
-            android:src="@drawable/user_info_btn"
-            android:textColor="@color/black" />
+            android:scaleType="fitCenter"
+            android:src="@drawable/search_btn" />
+
+        <ImageButton
+            android:id="@+id/user_info_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="300dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/title"
+            android:background="#00ff0000"
+            android:backgroundTint="#FFFFFF"
+            android:scaleType="fitCenter"
+            android:src="@drawable/user_info_btn" />
     </RelativeLayout>
 
 
@@ -62,7 +74,7 @@
                     android:id="@+id/private_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="250dp"
+                    android:layout_marginRight="230dp"
                     android:text="과외 게시판 "/>
                 <Button
                     android:id="@+id/private_more"
@@ -96,7 +108,7 @@
                     android:id="@+id/meeting_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="254dp"
+                    android:layout_marginRight="235dp"
                     android:text="과팅 게시판"/>
                 <Button
                     android:id="@+id/meeting_more"

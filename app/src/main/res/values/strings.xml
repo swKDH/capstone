@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">capstone</string>
+    <string name="main_text">회원가입</string>
+    <string name="id">아이디</string>
+    <string name="school">학교명</string>
+    <string name="id_hint">학교에서 사용하는 웹메일을 입력하세요</string>
+    <string name="password_hint"></string>
+    <string name="password">비밀번호</string>
+    <string name="password_recheck">비밀번호 확인</string>
+    <string name="nickname">닉네임</string>
+    <string name="next">회원가입</string>
+    <string name="university">학번</string>
+    <string name="submit_btn">확인</string>
+    <string name="find_id">아이디 찾기</string>
+    <string name="university_id">학번입력</string>
+    <string-array name="university_list">
+        <item>경성대학교</item>
+        <item>부경대학교</item>
+    </string-array>
 </resources>

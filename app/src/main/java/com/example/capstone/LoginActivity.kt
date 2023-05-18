@@ -30,6 +30,7 @@ class LoginActivity : AppCompatActivity() {
         var loginService = retrofit.create(LoginService::class.java)
 
         val intent = Intent(this, SignupActivity::class.java)
+        val intent2 = Intent(this, MainAfterActivity::class.java)
         val signup_btn: Button = findViewById(R.id.signup_btn)
         val login_btn: Button = findViewById(R.id.login_btn)
         val editText: EditText = findViewById(R.id.editText)
@@ -50,13 +51,16 @@ class LoginActivity : AppCompatActivity() {
                 override fun onResponse(call: Call<Login>, response: Response<Login>) {
                     var login: Login? = response.body() // code, msg
 
-                    Log.d("headers", response.headers().toString())
-                    Log.d("status", response.code().toString())
-                    Log.d("??","$login");
                     var dialog = AlertDialog.Builder(this@LoginActivity)
-                    dialog.setTitle("알람!")
-                    dialog.setMessage("code = " + login?.data + " msg = " + login?.error)
-                    dialog.show()
+                    if(login?.data == null){
+                        dialog.setMessage("아이디 혹은 비밀번호가 일치하지 않습니다!")
+                        dialog.show()
+                    }else{
+                        //dialog.setMessage("code = " + login?.data + " msg = " + login?.error)
+                        //dialog.show()
+
+                        startActivity(intent2)
+                    }
                 }
                 override fun onFailure(call: Call<Login>, t: Throwable) {
                     //웹 통신 실패 했을때 실행되는 코드
